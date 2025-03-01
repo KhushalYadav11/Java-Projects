@@ -13,8 +13,8 @@ if not exist server_keystore.jks (
 
 :: Compile the Java files
 echo Compiling Java files...
-javac Server.java
-javac Client.java
+javac src/Server.java
+javac src/Client.java
 
 :: Check if compilation was successful
 if %ERRORLEVEL% EQU 0 (
