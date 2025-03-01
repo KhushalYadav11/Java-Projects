@@ -13,8 +13,8 @@ if not exist server_keystore.jks (
 
 :: Compile the Java files
 echo Compiling Java files...
-javac src/Server.java
-javac src/Client.java
+javac -d out src/Server.java
+javac -d out src/Client.java
 
 :: Check if compilation was successful
 if %ERRORLEVEL% EQU 0 (
@@ -31,17 +31,17 @@ if %ERRORLEVEL% EQU 0 (
 
     if "%choice%"=="1" (
         echo Starting server...
-        start "Secure File Server" java Server
+        start "Secure File Server" java -cp out Server
         goto end
     ) else if "%choice%"=="2" (
         echo Starting client...
-        java Client
+        java -cp out Client
         goto end
     ) else if "%choice%"=="3" (
         echo Starting server in new window...
-        start "Secure File Server" java Server
+        start "Secure File Server" java -cp out Server
         echo Starting client...
-        java Client
+        java -cp out Client
         goto end
     ) else if "%choice%"=="4" (
         echo Exiting.
