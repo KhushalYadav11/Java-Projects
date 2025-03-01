@@ -39,7 +39,7 @@ This is a Java-based secure file transfer system that implements a client-server
 2. For a typical use case, select option 3 to run both.
 
 3. When the client starts, you'll be prompted to log in with a username and password.
-   - Default users: `alice` (password: `password123`) or `bob` (password: `securepass456`)
+   - Default users: `Wild` (password: `password123`) or `Yadav` (password: `12345678`)
 
 4. After logging in, you can use the following commands:
    - `UPLOAD <filename>` - Upload a file from client_storage directory
